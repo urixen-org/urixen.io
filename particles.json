@@ -1,0 +1,105 @@
+{
+  "particles": {
+    "number": {
+      "value": 120,
+      "density": {
+        "enable": true,
+        "value_area": 1200
+      }
+    },
+    "color": {
+      "value": ["#0011ff", "#00ffff", "#ff00ff", "#00ff11"]
+    },
+    "shape": {
+      "type": ["circle", "triangle", "polygon"],
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 6
+      }
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 0.5,
+        "opacity_min": 0.2,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 8,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 4,
+        "size_min": 2,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 250,
+      "color": "#00ffff",
+      "opacity": 0.3,
+      "width": 1.5
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": true,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": ["grab", "repulse"]
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 150,
+        "line_linked": {
+          "opacity": 0.8
+        }
+      },
+      "bubble": {
+        "distance": 200,
+        "size": 30,
+        "duration": 2,
+        "opacity": 0.6,
+        "speed": 2
+      },
+      "repulse": {
+        "distance": 120,
+        "duration": 0.6
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}

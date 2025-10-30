@@ -1,0 +1,329 @@
+/* === FONT === */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "JetBrains Mono", "Oswald", monospace;
+  cursor: default;
+}
+
+/* === BASE === */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0f0f10;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: "JetBrains Mono", "Oswald", monospace;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 100vh;
+  z-index: 102;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === HEADER HOVER UNDERLINE EFFECT === */
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+h1:hover::after, 
+h2:hover::after, 
+h3:hover::after, 
+h4:hover::after, 
+h5:hover::after, 
+h6:hover::after {
+  width: 100%;
+}
+
+
+/* === PARTICLES BACKGROUND === */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 0;
+  pointer-events: auto;
+}
+#content {
+  position: relative;
+  z-index: 100;
+}
+
+div {
+  z-index: 102;
+}
+
+/* === HERO SECTION === */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero h1 {
+  font-size: 48px;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.7s step-end infinite;
+  padding: 0%;
+  margin: 0%;
+  cursor: default;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* === CARD SECTIONS (Products & Services) === */
+#products ul,
+#services ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+}
+
+#products li,
+#services li {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#products li:hover,
+#services li:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#products img,
+#services img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+#products h3,
+#services h3 {
+  font-size: 1.3rem;
+  margin: 10px 0 5px;
+}
+
+#products p,
+#services p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+#products a,
+#services a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #007bff;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+#products a:hover,
+#services a:hover {
+  background: #005dc1;
+}
+
+/* === TAG STYLES === */
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.red {
+  background: #ff4b4b;
+}
+
+.green {
+  background: #28a745;
+}
+
+.yellow {
+  background: #ffc107;
+}
+
+.blue {
+  background: #007bff;
+}
+
+.orange {
+  background: #fd7e14;
+}
+
+.purple {
+  background: #6f42c1;
+}
+
+.teal {
+  background: #20c997;
+}
+
+.pink {
+  background: #e83e8c;
+}
+
+.cyan {
+  background: #17a2b8;
+}
+
+.gray {
+  background: #6c757d;
+}
+
+
+/* === ABOUT SECTION === */
+#about-us p {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* === TEAM SECTION === */
+#our-team ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 20px;
+  width: 220px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.team-member h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.team-member a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #products li,
+  #services li,
+  .team-member {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  #hero h1 {
+    font-size: 2.4rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+}
